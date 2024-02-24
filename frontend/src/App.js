@@ -5,6 +5,7 @@ import About from './pages/About';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
+import Player from './pages/Player';
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
             <Route 
               path='/login/admin'
               element={<Admin />}
+            />
+            <Route 
+              path='/playerview'
+              element={<Player />}
             />
           </Routes>
         </div>

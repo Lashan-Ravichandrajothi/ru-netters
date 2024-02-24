@@ -33,7 +33,6 @@ const PlayerForm = () => {
       console.log('new workout added:', json)
       dispatch({type: 'CREATE_PLAYERS', payload: json})
     }
-
   } 
 
   return (

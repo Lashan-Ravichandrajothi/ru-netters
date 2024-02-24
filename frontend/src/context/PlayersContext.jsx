@@ -12,6 +12,10 @@ export const playersReducer = (state, action) => {
             return {
                 players: [action.payload, ...state.players]   
             }
+        case 'DELETE_PLAYER':
+            return {
+                players: state.players.filter((p) => p._id !== action.payload._id)  
+            }
         default: 
             return state
     }
