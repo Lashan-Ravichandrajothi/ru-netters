@@ -2,7 +2,7 @@ const Player = require('../models/playerModel')
 const mongoose = require('mongoose')
 
 const getPlayers = async (req, res) => {
-    const players = await Player.find({})
+    const players = await Player.find({}).sort({createdAt: -1})
     res.status(200).json(players)
 }
 

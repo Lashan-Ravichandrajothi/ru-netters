@@ -15,6 +15,6 @@ const playerSchema = new Schema({
         type: Number,
         required: true
     }
-}, [])
+}, {timestamps: true})
 
 module.exports = mongoose.model('Player', playerSchema)
