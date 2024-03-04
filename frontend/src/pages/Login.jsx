@@ -19,7 +19,7 @@ const Login = () => {
     // Check credentials (replace with your actual authentication logic)
     if (email === "admin@gmail.com" && password === "admin1234") {
       setIsLoggedIn(true);
-      history('/login/admin'); // Redirect to dashboard
+      history('/admin'); // Redirect to dashboard
     } else {
       setError('Invalid email or password.');
     }
@@ -28,7 +28,7 @@ const Login = () => {
   // Check login state on mount and update history accordingly
   useEffect(() => {
     if (isLoggedIn) {
-      history('/login/admin'); // Redirect to dashboard if already logged in
+      history('/admin'); // Redirect to dashboard if already logged in
     }
   }, [isLoggedIn, history]);
 

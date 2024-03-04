@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import React from "react";
 
 export const PlayersContext = createContext()
 
@@ -16,6 +17,11 @@ export const playersReducer = (state, action) => {
             return {
                 players: state.players.filter((p) => p._id !== action.payload._id)  
             }
+        case 'SET_SELECTED_PLAYER':
+            return {
+                ...state,
+                players: action.payload
+            };
         default: 
             return state
     }

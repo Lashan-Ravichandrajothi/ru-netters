@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-particles": "^2.12.2",
     "react-router-dom": "^6.22.1"
   }
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { usePlayersContext } from "../hooks/usePlayersContext"
 import PlayerDetails from "../components/PlayerDetails"
 import PlayerForm from "../components/PlayerForm"
+import React from 'react';
 
 
 const Admin = () => {

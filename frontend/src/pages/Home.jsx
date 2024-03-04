@@ -1,7 +1,9 @@
+import React from 'react';
+
 const Home = () => {
     return (
-        <div className="home">
-            <h2>Home - Under development</h2>
+        <div>
+            <h1>Home</h1>
         </div>
     )
 }

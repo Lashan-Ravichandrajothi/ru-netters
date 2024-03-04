@@ -18,7 +18,7 @@ const Navbar = () => {
             About
           </Link>
           <Link to="/dashboard" className="nav-link">
-            Dashboard
+            Players
           </Link>
           <Link to="/login" className="nav-link">
             Log in

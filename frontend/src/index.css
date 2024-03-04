@@ -1,5 +1,7 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 
 /* layout */
 :root {
@@ -117,7 +119,7 @@ header a {
   cursor: pointer;
   background: #f1f1f1;
   padding: 6px;
-  border-radius: 50%;
+  border-radius: 10px;
   color: #333;
 }
 
@@ -132,6 +134,7 @@ input {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+  outline: none;
 }
 form button {
   background: var(--primary);
@@ -149,4 +152,204 @@ div.error {
   color: var(--error);
   border-radius: 4px;
   margin: 20px 0;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure full width */
+}
+
+.players.dash {
+  display: grid; /* Use grid layout for precise spacing */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust size as needed */
+  grid-gap: 10px; /* Adjust gap between cards */
+  height: 200px;
+  padding: 50px;
+}
+
+.player-details-dash {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out; /* Add hover effect (optional) */
+}
+
+.player-details-dash:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust hover effect as needed */
+}
+
+.player-details-dash h4 {
+  margin-bottom: 10px;
+}
+
+.player-details-dash button {
+  background-color: #333; /* Adjust button color */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.player-details-dash button:hover {
+  background-color: #444; /* Adjust button hover color */
+}
+
+/* Media queries for responsiveness (optional) */
+@media (max-width: 768px) {
+  .players.dash {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .players.dash {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Adjust width for very small screens */
+  }
+}
+
+.view {
+  background-color: #333; /* Adjust button color */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+.injury {
+ height: 100px; 
+}
+
+.player-details-dash {
+ text-align: center;
+ padding-top: 150px;
+}
+
+/* Import Google Fonts */
+
+/* Styles for About section *//* Styles for About section */
+.about {
+  background-color: none;
+  padding: 20px;
+  margin: 20px 0;
+  position: relative; /* Required for hover effect */
+  padding-left: 50px;
+}
+
+.vision-container {
+  display: flex; /* Arrange title and text horizontally */
+  flex-direction: column; /* Stack title and text vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align content to the left edge */
+  width: 1000px; /* Adjust width as needed */
+  height: auto; /* Allow content to define height */
+  background-color: #f5f5f5; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: absolute; /* Position from the corner */
+  top: 20px; /* Adjust top position as needed */
+  left: 20px; /* Adjust left position as needed */
+  transition: transform 0.3s ease-in-out; /* Hover transition */
+  padding: 50px;
+}
+
+.vision-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8em; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #333; /* Adjust color as needed */
+  margin-bottom: 10px;
+}
+
+.vision-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em; /* Adjust font size as needed */
+  color: #666; /* Adjust color as needed */
+  line-height: 1.5; /* Adjust line spacing as needed */
+}
+
+/* Responsive adjustments (optional) */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens here */
+  .flex-d {
+    display: flex;
+    gap: 70px;
+  }
+
+  .about {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .vision-container {
+    width: 250px; /* Adjust width for smaller screens */
+  }
+
+  .vision-title {
+    font-size: 1.5em;
+  }
+
+  .vision-text {
+    font-size: 1em;
+  }
+
+  .mission {
+    margin-top: 260px;
+  }
+  
+  .aim {
+    margin-top: 550px;
+  }
+  
+  .objectives {
+    margin-top: 850px;
+  }
+  .trainee {
+    padding-right: -500px;
+  }
+}
+
+.mission {
+  margin-top: 260px;
+  
+}
+
+.aim {
+  margin-top: 550px;
+}
+
+.objectives {
+  margin-top: 850px;
+}
+
+.plan{
+  margin-top: 150px;
+}
+
+.coach {
+  margin-top: 1300px;
+}
+
+/* .trainee {
+  padding-right: 500px;
+} */
+
+.flex-d {
+  display: flex;
+  gap: 70px;
+}
+
+.trainee-img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.age {
+  margin-top: 570px;
 }
