@@ -310,8 +310,37 @@ div.error {
   .objectives {
     margin-top: 850px;
   }
+
   .trainee {
-    padding-right: -500px;
+    margin-right: 200px;
+  }
+
+  .trainee-img {
+    margin-bottom: 1000px; /* Add margin for smaller screens */
+    margin-left: -500px;
+    margin-top: 350px;
+  }
+
+  .officials {
+    margin-bottom: -9100px;
+    top: 1450%;
+  }
+
+  .logo-img {
+    margin-bottom: 1000px; /* Add margin for smaller screens */
+    margin-left: -500px;
+    margin-top: 250px;
+    width: 30px;
+  }
+
+  .logo-abt {
+    margin-top: 950px;  
+    top: 3240%;
+  }
+
+  .about-club {
+    padding-left: 300px;
+    padding-right: 300px;
   }
 }
 
@@ -336,6 +365,9 @@ div.error {
   margin-top: 1300px;
 }
 
+.officials {
+  margin-top: 1760px;
+}
 /* .trainee {
   padding-right: 500px;
 } */
@@ -350,6 +382,72 @@ div.error {
   border-radius: 10px;
 }
 
+@media (min-width: 768px) {
+  .trainee-details {
+    /* Style the container for smaller screens */
+    display: block; /* Remove flexbox styles */
+  }
+
+ 
+}
+
+
+.logo-img {
+  width: 300px;
+  border-radius: 10px;
+}
+
 .age {
   margin-top: 570px;
+}
+
+.off-tag {
+  color: #111; /* Adjust color as needed */
+  font-weight: bold;
+}
+
+#banner {
+  background-image: url(https://images.pexels.com/photos/2474131/pexels-photo-2474131.jpeg?cs=srgb&dl=pexels-wallace-chuck-2474131.jpg&fm=jpg);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  background-position: center;
+  /* Crop the image to fit the container's dimensions */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-repeat: repeat;
+}
+
+
+.btn1{
+  margin-top: 30px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  color: whitesmoke;
+  border-radius: 14px;
+  font-weight: bolder;
+  font-size: 15px;
+  background: rgb(178, 71, 210);
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+
+}
+
+.about-club {
+  color: white;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.logo-abt {
+  margin-top: 3050px;
 }

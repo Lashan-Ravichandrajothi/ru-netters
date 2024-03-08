@@ -1,6 +1,4 @@
-import React from 'react';
-
-
+import React, {useState, useEffect} from 'react';
 import { usePlayersContext } from "../hooks/usePlayersContext";
 import { useNavigate } from "react-router-dom";
 
@@ -52,6 +50,7 @@ const PlayerDetails = ({ player }) => {
     navigate('/admin/players');
   };
 
+
   return (
     <div className="player-details">
       <h4>{player.name}</h4>
@@ -64,3 +63,4 @@ const PlayerDetails = ({ player }) => {
 };
 
 export default PlayerDetails;
+

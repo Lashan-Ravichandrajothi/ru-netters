@@ -18,7 +18,7 @@ const PlayerForm = () => {
   const [achievement, setachievement] = useState('')
   const [position, setposition] = useState('')
   const [injuries, setinjuries] = useState('')
-
+  const [image, setImage] = useState(''); // New state for image
 
   const [error, setError] = useState(null)
 
@@ -161,6 +161,7 @@ const PlayerForm = () => {
         onChange={(e) => setinjuries(e.target.value)} 
         value={injuries} 
       />
+
 
       <button>Add Player</button>
       {error && <div className="error">Fields are empty</div>}

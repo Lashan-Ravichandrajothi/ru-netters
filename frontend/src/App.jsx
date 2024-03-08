@@ -35,7 +35,7 @@ function App() {
               element={<Login />}
             />
             <Route 
-              path='/admin'
+              path='/4234kjlkjkl6sd78f6s78f6'
               element={<Admin />}
             />
             <Route 

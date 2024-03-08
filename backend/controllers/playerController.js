@@ -23,10 +23,10 @@ const getPlayer = async (req, res) => {
 }
 
 const createPlayer = async (req, res) => {
-    const { name, age, dateofbirth, address,  contactNo, email, school, postalid, passportNo,  bcNo, achievement, position, injuries } = req.body
+    const { name, age, dateofbirth, address,  contactNo, email, school, postalid, passportNo,  bcNo, achievement, position, injuries} = req.body
 
     try {
-      const player = await Player.create({ name, age, dateofbirth, address,  contactNo, email, school, postalid, passportNo,  bcNo, achievement, position, injuries })
+      const player = await Player.create({ name, age, dateofbirth, address,  contactNo, email, school, postalid, passportNo,  bcNo, achievement, position, injuries})
       res.status(201).json(player) 
     } catch (error) {
       console.error(error) 
