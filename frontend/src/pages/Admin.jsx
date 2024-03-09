@@ -3,6 +3,7 @@ import { usePlayersContext } from "../hooks/usePlayersContext"
 import PlayerDetails from "../components/PlayerDetails"
 import PlayerForm from "../components/PlayerForm"
 import React from 'react';
+import config from '../config';
 
 
 const Admin = () => {
@@ -10,7 +11,7 @@ const Admin = () => {
 
     useEffect(() => {
         const fetchPlayers = async () => {
-            const response = await fetch('/api/players')
+            const response = await fetch(config.apiUrl + '/api/players')
             const json = await response.json()
 
             if(response.ok) {

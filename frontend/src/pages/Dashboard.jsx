@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { usePlayersContext } from "../hooks/usePlayersContext"
 import PlayerDetails from "../components/PlayerDetails"
 import React from 'react';
+import config from '../config';
 
 
 const Dashboard = () => {
@@ -9,7 +10,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         const fetchPlayers = async () => {
-            const response = await fetch('/api/players')
+            const response = await fetch(config.apiUrl + '/api/players')
             const json = await response.json()
 
             if(response.ok) {

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { usePlayersContext } from "../hooks/usePlayersContext";
 import { useNavigate } from "react-router-dom";
+import config from '../config';
+
 
 const PlayerDetails = ({ player }) => {
   const { dispatch } = usePlayersContext();
@@ -8,7 +10,7 @@ const PlayerDetails = ({ player }) => {
 
   const handleClick = async () => {
     // ... existing delete logic ...
-    const response = await fetch(`/api/players/${player._id}`, {
+    const response = await fetch(config.apiUrl + `/api/players/${player._id}`, {
       method: "DELETE",
     });
 

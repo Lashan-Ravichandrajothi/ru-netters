@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { usePlayersContext } from "../hooks/usePlayersContext"
 import React from 'react';
-
+import config from '../config';
 
 const PlayerForm = () => {
   const { dispatch } = usePlayersContext()
@@ -20,6 +20,7 @@ const PlayerForm = () => {
   const [injuries, setinjuries] = useState('')
   const [image, setImage] = useState(''); // New state for image
 
+
   const [error, setError] = useState(null)
 
   const handleSubmit = async (e) => {
@@ -27,7 +28,7 @@ const PlayerForm = () => {
 
     const player = { name, age, dateofbirth, address,  contactNo, email, school, postalid, passportNo,  bcNo, achievement, position, injuries }
     
-    const response = await fetch('/api/players', {
+    const response = await fetch(config.apiUrl + '/api/players', {
       method: 'POST',  
       body: JSON.stringify(player),
       headers: {
