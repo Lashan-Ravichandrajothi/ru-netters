@@ -11,7 +11,6 @@ import { useParams } from 'react-router-dom';
 import Plan from './pages/Plan';
 
 function App() {
-  const { playerId } = useParams(); // Extract player ID from URL
   return (
     <div className="App">
       <BrowserRouter>
