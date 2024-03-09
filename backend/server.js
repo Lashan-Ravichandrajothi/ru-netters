@@ -6,6 +6,10 @@ const playerRoutes = require('./routes/players')
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+const cors = require('cors');
+
+app.use(cors({ origin: 'https://65ec8c89c5414fc120d30c6c--sunny-hotteok-18a0de.netlify.app' }));
+
 
 app.use(express.json())
 
