@@ -29,12 +29,13 @@ const PlayerForm = () => {
     const player = { name, age, dateofbirth, address,  contactNo, email, school, postalid, passportNo,  bcNo, achievement, position, injuries }
     
     const response = await fetch(config.apiUrl + '/api/players', {
-      method: 'POST',  
+      method: 'POST',
       body: JSON.stringify(player),
       headers: {
         'Content-Type': 'application/json'
-      }
-    })
+      },
+      mode: 'no-cors' // Disables CORS checks (less secure)
+    });
     const json = await response.json()
 
     if (!response.ok) {
