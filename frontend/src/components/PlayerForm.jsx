@@ -34,7 +34,6 @@ const PlayerForm = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      mode: 'no-cors' // Disables CORS checks (less secure)
     });
     const json = await response.json()
 
