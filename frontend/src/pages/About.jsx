@@ -88,7 +88,7 @@ const About = () => {
           <p className='off-tag'>Committee Members</p>
           <ul>
             <li>Mrs. Niroshini Mathawan – Assistant Manager – LB Finance PLC Kandy 077-6535116</li>
-            <li>Mr. Shehan Rajapaksha – Senior Bank associate – NDB Bank Digana 077-5905031</li>
+            <li>Mr. Shehan Rajapaksha – Junior executive – NDB Bank Digana 077-5905031</li>
             <li>Mr. Dilan Kumara – Businessman 077-3575576</li>
             <li>Mr. Lakmal Madurawela – Businessman 077-3119576</li>
           </ul>

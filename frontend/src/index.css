@@ -14,8 +14,9 @@ body {
   font-family: "Poppins";
 }
 header {
-  background: rgb(178, 71, 210);
+  background: linear-gradient(to right, #3a1c46, #5f2381); /* Example shades of purple */
 }
+
 header .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -407,7 +408,7 @@ div.error {
 }
 
 #banner {
-  background-image: url(https://images.pexels.com/photos/2474131/pexels-photo-2474131.jpeg?cs=srgb&dl=pexels-wallace-chuck-2474131.jpg&fm=jpg);
+  background-image: url(./assets/court.png);
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -431,7 +432,7 @@ div.error {
   border-radius: 14px;
   font-weight: bolder;
   font-size: 15px;
-  background: rgb(178, 71, 210);
+  background: linear-gradient(to right, #b457d8, #531c73);
   text-decoration: none;
 }
 
@@ -440,7 +441,7 @@ a {
   color: white;
   font-family: "Poppins";
 
-}
+}    
 
 .about-club {
   color: white;
