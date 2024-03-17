@@ -18,8 +18,6 @@ const PlayerForm = () => {
   const [achievement, setachievement] = useState('')
   const [position, setposition] = useState('')
   const [injuries, setinjuries] = useState('')
-  const [image, setImage] = useState(''); // New state for image
-
 
   const [error, setError] = useState(null)
 
@@ -58,11 +56,7 @@ const PlayerForm = () => {
       console.log('new workout added:', json)
       dispatch({type: 'CREATE_PLAYERS', payload: json})
     }
-
-    if(!email == /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-    ){
-      alert("invalid email")
-    }
+    
   } 
 
   return (

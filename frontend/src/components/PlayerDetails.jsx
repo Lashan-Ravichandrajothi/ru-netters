@@ -9,7 +9,6 @@ const PlayerDetails = ({ player }) => {
   const navigate = useNavigate();
 
   const handleClick = async () => {
-    // ... existing delete logic ...
     const response = await fetch(config.apiUrl + `/api/players/${player._id}`, {
       method: "DELETE",
     });
@@ -22,13 +21,11 @@ const PlayerDetails = ({ player }) => {
   };
 
   const viewPlayer = async () => {
-    // Check if player information exists (avoid potential errors)
     if (!player) {
       console.error("Player data not available. Consider fetching or passing it as a prop.");
-      return; // Exit the function if no player data
+      return; 
     }
 
-    // Store player details in local storage
     localStorage.setItem('selectedPlayer', JSON.stringify({
       name: player.name,
       age: player.age,
@@ -45,19 +42,15 @@ const PlayerDetails = ({ player }) => {
       injuries: player.injuries
     }));
 
-    // Optionally display feedback or update state (replace with your preference)
-    // alert('Player details stored in local storage!');
-
-    // Navigate to the players page
     navigate('/admin/players');
   };
-
 
   return (
     <div className="player-details">
       <h4>{player.name}</h4>
       <p>Age: {player.age}</p>
       <p>Contact: {player.contactNo}</p>
+      <span onClick={handleClick}>Delete</span>
       <span onClick={handleClick}>Delete</span>
       <button className="view" onClick={viewPlayer}>View Player</button>
     </div>
