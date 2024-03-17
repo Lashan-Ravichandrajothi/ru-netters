@@ -50,9 +50,28 @@ const deletePlayer = async (req, res) => {
     res.status(200).json(player)
 }
 
+const updatePlayer = async (req, res) => {
+    const { id } = req.params
+  
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({error: 'No such player'})
+    }
+  
+    const player = await Player.findOneAndUpdate({_id: id}, {
+      ...req.body
+    })
+  
+    if (!player) {
+      return res.status(400).json({error: 'No such player'})
+    }
+  
+    res.status(200).json(player)
+  }
+
 module.exports = {
     createPlayer,
     getPlayer,
     getPlayers,
-    deletePlayer
+    deletePlayer,
+    updatePlayer
 }
